@@ -5,7 +5,29 @@
 @import "reset.css";
 @import "Home/home_header";
 @import "Home/home_threeColumns";
+@import "Home/home_handover";
+@import "Home/home_aboutUs";
+@import "Home/home_help";
 
 body{
   font-family: $font-base;
+  color: $color--5;
+}
+.main--button{
+  font-size: 36px;
+  font-family: $font-base;
+  font-weight: 300;
+  width: 310px;
+  height: 120px;
+  margin: 22px;
+  background: none;
+  border: 0.75px solid #3C3C3C;
+}
+
+@mixin decoration {
+  content: "";
+  position: absolute;
+  background: url("../../assets/Decoration.svg") center/cover;
+  width: 250px;
+  height: 33px;
 }

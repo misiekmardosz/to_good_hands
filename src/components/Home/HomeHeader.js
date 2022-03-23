@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import * as Scroll from 'react-scroll';
+import {Link as Scroll} from 'react-scroll';
 // import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
@@ -13,15 +13,15 @@ const HomeHeader = () => {
                 <div className="header--container">
                     <div className={"header--nav"}>
                         <div className="login--panel">
-                            <Link to="/logowanie" >Zaloguj</Link>
-                            <Link to="/rejestracja">Załóż Konto</Link>
+                            <Link to="/logowanie" className="login--link">Zaloguj</Link>
+                            <Link to="/rejestracja" className="login--link">Załóż Konto</Link>
                         </div>
                         <nav className="nav">
-                            <Link to={"#"}>Start</Link>
-                            <Link to={"#"}>O co chodzi?</Link>
-                            <Link to={"#"}>O nas</Link>
-                            <Link to={"#"}>Fundacja i organizacje</Link>
-                            <Link to={"#"}>Kontakt</Link>
+                            <Scroll to={"#"}>Start</Scroll>
+                            <Scroll to={"#"}>O co chodzi?</Scroll>
+                            <Scroll to={"#"}>O nas</Scroll>
+                            <Scroll to={"#"}>Fundacja i organizacje</Scroll>
+                            <Scroll to={"#"}>Kontakt</Scroll>
                         </nav>
                     </div>
                     <div className={"header--main"}>

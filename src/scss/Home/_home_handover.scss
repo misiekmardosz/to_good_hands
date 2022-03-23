@@ -1,0 +1,43 @@
+
+.handover{
+  text-align: center;
+  .handover--title{
+    margin-top: 55px;
+    font-size: 38px;
+    position: relative;
+  }
+  .handover--title::after{
+    left: calc(50% - 125px);
+    bottom: -58px;
+    content: "";
+    position: absolute;
+    background: url("../../assets/Decoration.svg") center/cover;
+    width: 250px;
+    height: 33px;
+  }
+  .handover--columns{
+    display: flex;
+    margin-top: 92px;
+    margin-bottom: 35px;
+    justify-content: center;
+    background-color: $color--1;
+    .handover--column{
+      margin: 73px 0 62px 0;
+      padding: 0 87px;
+
+      .handover--column--title{
+        position: relative;
+      }
+      .handover--column--title::after{
+        position: absolute;
+        content: "";
+        color: $color--5;
+        width: 70px;
+        height: 2px;
+      }
+      .handover--column--paragraph{
+        margin-top: 10px;
+      }
+    }
+  }
+}

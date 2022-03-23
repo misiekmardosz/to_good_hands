@@ -7,7 +7,7 @@
   .main--photo{
     width: 50%;
     background: black;
-    background: url("");
+    background: url("../../assets/Home-Hero-Image.jpg") right/cover;
   }
   .header--container{
     width: 50%;
@@ -47,10 +47,16 @@
         color: #3C3C3C;
         opacity: 1;
         margin-bottom: 123px;
+        position: relative;
       }
       h1::after{
+        left: calc(50% - 125px);
+        bottom: -58px;
         content: "";
-        //background: url("../src/assets/Decoration.svg");
+        position: absolute;
+        background: url("../../assets/Decoration.svg") center/cover;
+        width: 250px;
+        height: 33px;
       }
       .buttons{
         .main--button{
