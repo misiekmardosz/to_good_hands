@@ -2,14 +2,11 @@ import React from "react";
 import {HomeHeader} from "./HomeHeader";
 import {HomeThreeColumns} from "./HomeThreeColumns";
 
-const Home = () => {
-  return(
+const Home = () => (
       <>
-        <HomeHeader/>
+          <HomeHeader/>
           <HomeThreeColumns/>
       </>
-
-  )
-}
+)
 
 export {Home}

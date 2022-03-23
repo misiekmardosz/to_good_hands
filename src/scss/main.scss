@@ -3,17 +3,9 @@
 @import "settings/colors";
 @import "settings/main_fonts";
 @import "reset.css";
+@import "Home/home_header";
+@import "Home/home_threeColumns";
 
 body{
   font-family: $font-base;
-}
-.header{
-  display: flex;
-  height: 963px;
-  margin-right: 142px;
-  .main--photo{
-    width: 50%;
-    background: url("../assets/Home-Hero-Image.jpg") right/cover;
-  }
-
 }
