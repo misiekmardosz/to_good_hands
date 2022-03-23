@@ -1,0 +1,22 @@
+.three--columns{
+  display: flex;
+  background: $color--3;
+  padding: 0 20px;
+  .column{
+    text-align: center;
+    font-weight: 300;
+    padding: 0 140px;
+    h2{
+      font-size: 90px;
+      margin-top: 46px;
+    }
+    h3{
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    p{
+      font-size: 16px;
+      margin-top: 28px;
+    }
+  }
+}
