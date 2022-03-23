@@ -11,7 +11,7 @@ const HomeHeader = () => {
             <header className="header">
                 {/*<img src={homeHero} className="main--photo"/>*/}
                 <div className="main--photo"></div>
-                <div className="nav--container">
+                <div className="header--container">
                     <div className="login--panel">
                         <Link to="/logowanie">Zaloguj</Link>
                         <Link to="/rejestracja">Załóż Konto</Link>
@@ -23,6 +23,11 @@ const HomeHeader = () => {
                         <a href="#" className="nav--link">Fundacja i organizacje</a>
                         <a href="#" className="nav--link">Kontakt</a>
                     </nav>
+                    <div className={header--main}>
+                        <h1 className="title">Zacznij pomagać! Oddaj niechciane rzeczy w zaufane ręce</h1>
+                        <button className="main--button">ODDAJ RZECZY</button>
+                        <button className="main--button">ZORGANIZUJ ZBIÓRKĘ</button>
+                    </div>
                 </div>
             </header>
         </>
