@@ -1,0 +1,18 @@
+.help--container{
+  text-align: center;
+  .help--title{
+    font-size: 38px;
+    margin-top: 70px;
+  }
+  .tab--list{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+  }
+  .tab--panel{
+    .tab--row{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

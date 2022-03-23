@@ -7,17 +7,47 @@ const HomeHelp = () => {
   return(
       <section className={"help--container"}>
           <h2 className={"help--title"}>Komu Pomagamy?</h2>
-          <Tabs>
-              <TabList>
-                  <Tab>Title 1</Tab>
-                  <Tab>Title 2</Tab>
+          <Tabs className={"help--tabs"}>
+              <TabList className={"tab--list"}>
+                  <Tab className={"main--button"}>Fundacjom</Tab>
+                  <Tab className={"main--button"}>Organizacjom pozarządowym</Tab>
+                  <Tab className={"main--button"}>Lokalnym zbiórkom</Tab>
               </TabList>
-
-              <TabPanel>
-                  <h2>Any content 1</h2>
+              <TabPanel className={"tab--panel"}>
+                  <p className={"tab--title"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                  <article className={"tab--row"}>
+                      <div className={"tab--row--main"}>
+                          <h3 className={"tab--row--title"}>Fundacja “Dbam o Zdrowie”</h3>
+                          <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
+                      </div>
+                      <div>
+                          <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                      </div>
+                  </article>
+                  <article className={"tab--row"}>
+                      <div className={"tab--row--main"}>
+                          <h3 className={"tab--row--title"}>Fundacja “Dbam o Zdrowie”</h3>
+                          <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
+                      </div>
+                      <div>
+                          <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                      </div>
+                  </article>
+                  <article className={"tab--row"}>
+                      <div className={"tab--row--main"}>
+                          <h3 className={"tab--row--title"}>Fundacja “Dbam o Zdrowie”</h3>
+                          <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
+                      </div>
+                      <div>
+                          <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                      </div>
+                  </article>
               </TabPanel>
               <TabPanel>
-                  <h2>Any content 2</h2>
+
+              </TabPanel>
+              <TabPanel>
+                  <p className={"tab--title"}></p>
               </TabPanel>
           </Tabs>
       </section>
