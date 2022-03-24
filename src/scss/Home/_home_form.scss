@@ -1,0 +1,43 @@
+.footer--form{
+  margin-top: 80px;
+  height: 1026px;
+  background-image: url("../../assets/Background-Contact-Form.jpg");
+  display: flex;
+  justify-content: center;
+  .form--container{
+    width: 1300px;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    .form--title{
+      font-size: 38px;
+      position: relative;
+      margin-bottom: 126px;
+    }
+    .form--title::before{
+      content: "";
+      position: absolute;
+      left: calc(50% - 125px);
+      bottom: -58px;
+      background: url("../../assets/Decoration.svg") center/cover;
+      width: 250px;
+      height: 33px;
+    }
+    .form--box{
+      filter: none;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+}
+//.footer--form::before{
+//  content: "";
+//  width: 100%;
+//  height: 100%;
+//  background: rgba(255,255,255,0.7);
+//  position: absolute;
+//}
