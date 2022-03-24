@@ -3,7 +3,7 @@ import people from "../../assets/People.jpg"
 import signature from "../../assets/Signature.svg"
 const HomeAboutUs = () => {
   return(
-      <section className={"about--container"}>
+      <section className={"about--container"} title="section4" id="section4">
           <div className={"about--content"}>
               <article className="about--article">
                   <h2 className={"about--title"}>O nas</h2>

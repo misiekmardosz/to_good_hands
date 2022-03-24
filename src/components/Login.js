@@ -1,10 +1,11 @@
 import React from "react";
+import HeaderNav from "./Home/HeaderNav";
 
 const Login = () => {
     return(
-        <>
-            <div>wefkljwlkejflkwejflkwejf</div>
-        </>
+        <section>
+            <HeaderNav/>
+        </section>
     )
 }
 

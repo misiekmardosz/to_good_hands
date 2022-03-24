@@ -7,7 +7,7 @@ import icon4 from "../../assets/Icon-4.svg"
 
 const HomeHandOver = () => {
   return(
-      <section className={"handover"}>
+      <section className={"handover"}title="section3" id="section3">
           <h2 className={"handover--title"}>Wystarczą 4 proste kroki</h2>
           <div className={"handover--columns"}>
               <article className={"handover--column"}>

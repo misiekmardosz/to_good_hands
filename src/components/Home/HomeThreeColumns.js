@@ -1,10 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
-
 const HomeThreeColumns = () => {
     return(
         <>
-            <section className={"three--columns"}>
+            <section className={"three--columns"} title="section2" id="section2">
                 <article className={"column"}>
                     <h2 className={"column--number"}>10</h2>
                     <h3 className={"column--title"}>ODDANYCH WORKÓW</h3>
