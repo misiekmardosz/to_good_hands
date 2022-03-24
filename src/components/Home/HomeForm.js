@@ -29,11 +29,11 @@ const HomeForm = () => {
               <button className={"send--button"}>Wyślij</button>
             </form>
           </div>
+            <a href="#"><img src={instagram}/></a>
+            <a href="#"><img src={facebook}/></a>
         </div>
           <div className={'footer'}>
               <h5>Copyright by Coders Lab</h5>
-              <a href="#"><img src={instagram}/></a>
-              <a href="#"><img src={facebook}/></a>
 
           </div>
       </footer>

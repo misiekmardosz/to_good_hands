@@ -17,11 +17,11 @@ const HomeHeader = () => {
                             <Link to="/rejestracja" className="login--link">Załóż Konto</Link>
                         </div>
                         <nav className="nav">
-                            <Scroll to={"#"}>Start</Scroll>
-                            <Scroll to={"#"}>O co chodzi?</Scroll>
-                            <Scroll to={"#"}>O nas</Scroll>
-                            <Scroll to={"#"}>Fundacja i organizacje</Scroll>
-                            <Scroll to={"#"}>Kontakt</Scroll>
+                            <Scroll to={"#"} className="nav--link">Start</Scroll>
+                            <Scroll to={"#"} className="nav--link">O co chodzi?</Scroll>
+                            <Scroll to={"#"} className="nav--link">O nas</Scroll>
+                            <Scroll to={"#"} className="nav--link">Fundacja i organizacje</Scroll>
+                            <Scroll to={"#"} className="nav--link">Kontakt</Scroll>
                         </nav>
                     </div>
                     <div className={"header--main"}>

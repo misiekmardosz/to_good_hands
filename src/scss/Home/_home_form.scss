@@ -1,5 +1,5 @@
 .footer--form{
-  background-image: url("../../assets/Background-Contact-Form.jpg");
+  background: url("../../assets/Background-Contact-Form.jpg") center/cover;
   display: flex;
   justify-content: center;
   height: 1026px;
@@ -63,7 +63,7 @@
           background: none;
           border: none;
           border-bottom: 1px solid $color--4;
-          margin: 5px;
+          margin: 40px 5px 5px 5px;
           h3{
             margin-bottom: 12px;
           }
@@ -90,19 +90,24 @@
     max-width: 1600px;
     display: flex;
     align-items: center;
-    flex-grow: 1;
+    //flex-grow: 1;
     h5{
       width: 100%;
       text-align: center;
     }
-    a{
-    }
+  }
+  a{
+    position: absolute;
+    bottom: 20px;
+  }
+  a:last-of-type{
+    margin-right: 50px;
   }
 }
-//.footer--form::before{
-//  content: "";
-//  width: 100%;
-//  height: 100%;
-//  background: rgba(255,255,255,0.7);
-//  position: absolute;
-//}
+.footer--form::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.7);
+  position: absolute;
+}

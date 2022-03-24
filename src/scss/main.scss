@@ -23,6 +23,9 @@ body{
   margin: 22px;
   background: none;
   border: 0.75px solid #3C3C3C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main--button:focus{
   outline: none;
@@ -55,7 +58,10 @@ body{
   font-weight: 300;
   width: 150px;
   height: 50px;
-  margin: 22px;
+  margin: 22px 5px 22px 22px;
   background: none;
   border: 0.75px solid #3C3C3C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

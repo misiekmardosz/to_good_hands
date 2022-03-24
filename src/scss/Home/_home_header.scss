@@ -16,19 +16,32 @@
       position: absolute;
       right: 0;
       display:flex;
-      flex-flow: column;
+      flex-direction: column;
       .login--panel{
         text-align: right;
         margin-top: 37px;
         font-size: 13px;
-        //link{
-        //  padding: 10px;
-        //  border: 0.75px solid #FAD648;
-        //  width: 100%;
-        //}
-        .nav{
+        .login--link{
+          padding: 10px;
+          border: 0.75px solid #FAD648;
           width: 100%;
-          text-align: right;
+          margin: 10px;
+          text-decoration: none;
+          color: $color--4;
+        }
+      }
+      .nav{
+        width: 100%;
+        text-align: right;
+        margin-top: 40px;
+        .nav--link{
+
+          padding: 20px 25px;
+          transition: 0.3s;
+        }
+        .nav--link:hover{
+          opacity: 0.4;
+          background-color: $color--3;
         }
       }
     }
