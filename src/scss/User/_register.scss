@@ -4,13 +4,14 @@
   justify-content: center;
   align-items: center;
   .register--title{
-      text-align: center;
-      font-size: 40px;
-      letter-spacing: -0.76px;
-      color: #3C3C3C;
-      opacity: 1;
-      margin-bottom: 123px;
-      position: relative;
+    margin-top: 250px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: -0.76px;
+    color: #3C3C3C;
+    opacity: 1;
+    margin-bottom: 123px;
+    position: relative;
     }
     .register--title::after{
       left: calc(50% - 125px);

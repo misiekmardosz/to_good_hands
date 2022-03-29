@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {Link as Scroll} from "react-scroll";
 import facebook from "../../assets/Facebook.svg"
 import instagram from "../../assets/Instagram.svg"
 
 const HomeForm = () => {
+    const [email, setEmail] = useState('')
+    const handleEmail = () => {
+        setEmail(handleEmail)
+    }
+
+
+
   return(
       <footer className="footer--form" title="section6" id="section6">
         <div className="form--container">
@@ -16,6 +23,7 @@ const HomeForm = () => {
                     <div className={"input"}>
                         <h3>wpisz swoje imie</h3>
                         <input className={"form--input"} placeholder={"Krzysztof"}/>
+                        <input type="text" className={"form--input"} placeholder='0'onChange={e => handleEmail(e.target.value)}/>
                     </div>
                     <div className={"input"}>
                         <h3>wpisz swoj email</h3>

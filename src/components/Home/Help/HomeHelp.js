@@ -212,7 +212,6 @@ const HomeHelp = () => {
                       </TabList>
                   </Tabs>
               </TabPanel>
-
               <TabPanel className={"tab--panel"}>
                   <p className={"tab--title"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br/> do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/> Ut enim ad minim veniam, quis nostrud exercitation.</p>
 
