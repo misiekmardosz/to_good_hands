@@ -16,8 +16,8 @@ function App() {
               <Route exact path="/" element={<Home/>}/>
               <Route path="/oddaj-rzeczy" element={<Form/>}/>
               <Route path="/logowanie" element={<Login/>}/>
-              <Route path="/rejestracja" element={<Logout/>}/>
-              <Route path="/wylogowano" element={<Register/>}/>
+              <Route path="/rejestracja" element={<Register/>}/>
+              <Route path="/wylogowano" element={<Logout/>}/>
           </Routes>
       </BrowserRouter>
   );

@@ -1,9 +1,9 @@
-.login--container{
+.register--container{
   height: 946px;
   display: flex;
   justify-content: center;
   align-items: center;
-  .login--title{
+  .register--title{
       text-align: center;
       font-size: 40px;
       letter-spacing: -0.76px;
@@ -12,7 +12,7 @@
       margin-bottom: 123px;
       position: relative;
     }
-    .login--title::after{
+    .register--title::after{
       left: calc(50% - 125px);
       bottom: -58px;
       content: "";
@@ -21,32 +21,32 @@
       width: 250px;
       height: 33px;
     }
-  .login--form{
+  .register--form{
     background: $color--1;
     margin-bottom: 40px;
-    .login--form--container{
+    .register--form--container{
       width: 250px;
       padding: 40px 67px 15px 67px;
-      .login--form--container--title{
+      .register--form--container--title{
         margin-bottom: 20px;
       }
-      .login--form--container--input{
+      .register--form--container--input{
         width: 100%;
         background: $color--1;
         border: none;
         border-bottom: 1px solid $color--4;
       }
     }
-    .login--form--container:last-child{
+    .register--form--container:last-child{
       padding-bottom: 40px;
     }
   }
-  .login--buttons--container{
+  .register--buttons--container{
     //width: 500px;
     display: flex;
     justify-content: space-between;
 
-    .login--buttons{
+    .register--buttons{
       font-size: 18px;
       font-family: $font-base;
       font-weight: 300;
@@ -58,12 +58,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      .login--link{
+      .register--link{
         text-decoration: none;
         color: $color--5;
       }
     }
-    .login--buttons:last-child{
+    .register--buttons:last-child{
       margin-right: -65px;
       border: 0.75px solid #3C3C3C;
     }

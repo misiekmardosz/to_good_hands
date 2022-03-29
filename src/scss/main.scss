@@ -10,6 +10,7 @@
 @import "Home/home_help";
 @import "Home/home_form";
 @import "User/login";
+@import "User/register";
 
 body{
   font-family: $font-base;
@@ -27,6 +28,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.tab--buttons{
+  border: none;
+}
+.tab--buttons:focus{
+  border: 0.75px solid #3C3C3C;
+  border-radius: 0;
 }
 .main--button:focus{
   outline: none;
@@ -50,6 +58,10 @@ body{
   height: 50px;
   margin: 22px;
   background: none;
+  //border: 0.75px solid #3C3C3C;
+}
+.bottom--button:focus{
+  border-radius: 0;
   border: 0.75px solid #3C3C3C;
 }
 

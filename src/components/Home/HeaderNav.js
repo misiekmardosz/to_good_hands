@@ -9,30 +9,26 @@ const HeaderNav = () => {
               <Link to="/rejestracja" className="login--link">Załóż Konto</Link>
           </div>
           <nav className="nav">
-              <Scroll to={"section1"} className="nav--link"
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}>Start</Scroll>
+              <Link to="/" className="nav--link">Start</Link>
               <Scroll to={"section2"} className="nav--link"
                       spy={true}
                       smooth={true}
-                      offset={-70}
+                      // offset={-70}
                       duration={500}>O co chodzi?</Scroll>
-              <Scroll to={"section3"} className="nav--link"
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}>O nas</Scroll>
               <Scroll to={"section4"} className="nav--link"
                       spy={true}
                       smooth={true}
-                      offset={-70}
-                      duration={500}>Fundacja i organizacje</Scroll>
+                      // offset={-70}
+                      duration={500}>O nas</Scroll>
               <Scroll to={"section5"} className="nav--link"
                       spy={true}
                       smooth={true}
                       offset={-70}
+                      duration={500}>Fundacja i organizacje</Scroll>
+              <Scroll to={"section6"} className="nav--link"
+                      spy={true}
+                      smooth={true}
+                      // offset={-70}
                       duration={500}>Kontakt</Scroll>
           </nav>
       </div>

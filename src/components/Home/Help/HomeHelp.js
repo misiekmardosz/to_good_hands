@@ -4,13 +4,13 @@ import 'react-tabs/style/react-tabs.css';
 
 const HomeHelp = () => {
   return(
-      <section className={"help--container"}>
+      <section className={"help--container"} title="section5" id="section5">
           <h2 className={"help--title"}>Komu Pomagamy?</h2>
           <Tabs className={"help--tabs"}>
               <TabList className={"tab--list"}>
-                  <Tab className={"main--button"}>Fundacjom</Tab>
-                  <Tab className={"main--button"}>Organizacjom pozarządowym</Tab>
-                  <Tab className={"main--button"}>Lokalnym zbiórkom</Tab>
+                  <Tab className={"main--button tab--buttons"}>Fundacjom</Tab>
+                  <Tab className={"main--button tab--buttons"}>Organizacjom pozarządowym</Tab>
+                  <Tab className={"main--button tab--buttons"}>Lokalnym zbiórkom</Tab>
               </TabList>
 
               {/*Foundations*/}

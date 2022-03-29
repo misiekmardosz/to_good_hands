@@ -6,7 +6,7 @@ import instagram from "../../assets/Instagram.svg"
 
 const HomeForm = () => {
   return(
-      <footer className="footer--form" title="section5" id="section5">
+      <footer className="footer--form" title="section6" id="section6">
         <div className="form--container">
             <div className="form--photo"></div>
             <div className={"form--box"}>
