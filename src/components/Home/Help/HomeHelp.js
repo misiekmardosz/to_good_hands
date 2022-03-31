@@ -2,8 +2,66 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import foundations from "./HelpFoundations";
+import ReactPaginate from 'react-paginate';
+import {useState,useEffect} from "react";
 
 const HomeHelp = () => {
+
+    function Items({ currentItems }) {
+        return (
+            <>
+                {currentItems && currentItems.map((item)=>(
+                    <article className={"tab--row"}>
+                        <div className={"tab--row--container"}>
+                            <div className={"tab--row--main"}>
+                                <h3 className={"tab--row--title"}>{item.title}</h3>
+                                <p className={"tab--row--paragraph"}>{item.text}</p>
+                            </div>
+                            <div>
+                                <p className={"tab--row--paragraph"}>{item.items}</p>
+                            </div>
+                        </div>
+                    </article>
+                ))
+                }
+            </>
+        );
+    }
+
+    function PaginatedItems({ itemsPerPage }) {
+        const [currentItems, setCurrentItems] = useState(null);
+        const [pageCount, setPageCount] = useState(0);
+        const [itemOffset, setItemOffset] = useState(0);
+
+        useEffect(() => {
+            const endOffset = itemOffset + itemsPerPage;
+            setCurrentItems(foundations.slice(itemOffset, endOffset));
+            setPageCount(Math.ceil(foundations.length / itemsPerPage));
+        }, [itemOffset, itemsPerPage]);
+
+        console.log(currentItems);
+
+        const handlePageClick = (event) => {
+            const newOffset = (event.selected * itemsPerPage) % foundations.length;
+            setItemOffset(newOffset);
+        };
+
+        return (
+            <>
+                <Items currentItems={currentItems} />
+                <ReactPaginate
+                    breakLabel="..."
+                    nextLabel="next >"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={5}
+                    pageCount={pageCount}
+                    previousLabel="< previous"
+                    renderOnZeroPageCount={null}
+                />
+            </>
+        );
+    }
+
   return(
       <section className={"help--container"} title="section5" id="section5">
           <h2 className={"help--title"}>Komu Pomagamy?</h2>
@@ -17,20 +75,22 @@ const HomeHelp = () => {
               {/*Foundations*/}
 
               <TabPanel className={"tab--panel"}>
-                  <p className={"tab--title"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji,<br/> z którymi współpracujemy. Możesz sprawdzić czym się zajmują,<br/> komu pomagają i czego potrzebują.</p>
-                  {foundations.map((item)=>(
-                      <article className={"tab--row"}>
-                          <div className={"tab--row--container"}>
-                              <div className={"tab--row--main"}>
-                                  <h3 className={"tab--row--title"}>{item.title}</h3>
-                                  <p className={"tab--row--paragraph"}>{item.text}</p>
-                              </div>
-                              <div>
-                                  <p className={"tab--row--paragraph"}>{item.items}</p>
-                              </div>
-                          </div>
-                      </article>
-                  ))}
+
+                  <PaginatedItems itemsPerPage={3}/>
+                  {/*<p className={"tab--title"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji,<br/> z którymi współpracujemy. Możesz sprawdzić czym się zajmują,<br/> komu pomagają i czego potrzebują.</p>*/}
+                  {/*{foundations.map((item)=>(*/}
+                  {/*    <article className={"tab--row"}>*/}
+                  {/*        <div className={"tab--row--container"}>*/}
+                  {/*            <div className={"tab--row--main"}>*/}
+                  {/*                <h3 className={"tab--row--title"}>{item.title}</h3>*/}
+                  {/*                <p className={"tab--row--paragraph"}>{item.text}</p>*/}
+                  {/*            </div>*/}
+                  {/*            <div>*/}
+                  {/*                <p className={"tab--row--paragraph"}>{item.items}</p>*/}
+                  {/*            </div>*/}
+                  {/*        </div>*/}
+                  {/*    </article>*/}
+                  {/*))}*/}
                           {/*<article className={"tab--row"}>*/}
                           {/*    <div className={"tab--row--container"}>*/}
                           {/*        <div className={"tab--row--main"}>*/}
