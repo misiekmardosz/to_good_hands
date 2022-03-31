@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import foundations from "./HelpFoundations";
 
 const HomeHelp = () => {
   return(
@@ -17,118 +18,107 @@ const HomeHelp = () => {
 
               <TabPanel className={"tab--panel"}>
                   <p className={"tab--title"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji,<br/> z którymi współpracujemy. Możesz sprawdzić czym się zajmują,<br/> komu pomagają i czego potrzebują.</p>
-                  <Tabs className={"help--tabs"}>
-                      <TabPanel className={"tab--panel"}>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja “Dbam o Zdrowie”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
+                  {foundations.map((item)=>(
+                      <article className={"tab--row"}>
+                          <div className={"tab--row--container"}>
+                              <div className={"tab--row--main"}>
+                                  <h3 className={"tab--row--title"}>{item.title}</h3>
+                                  <p className={"tab--row--paragraph"}>{item.text}</p>
                               </div>
-                          </article>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja “Dla dzieci”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
+                              <div>
+                                  <p className={"tab--row--paragraph"}>{item.items}</p>
                               </div>
-                          </article>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja “Bez domu”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
-                              </div>
-                          </article>
-                      </TabPanel>
-                      <TabPanel className={"tab--panel"}>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja “Lorem Ipsum 1”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
-                              </div>
-                          </article>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja  “Lorem Ipsum 2”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
-                              </div>
-                          </article>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja  “Lorem Ipsum 3”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
-                              </div>
-                          </article>
-                      </TabPanel>
-                      <TabPanel className={"tab--panel"}>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja “Scelerisque in dictum 1”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
-                              </div>
-                          </article>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja “Scelerisque in dictum 2”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
-                              </div>
-                          </article>
-                          <article className={"tab--row"}>
-                              <div className={"tab--row--container"}>
-                                  <div className={"tab--row--main"}>
-                                      <h3 className={"tab--row--title"}>Fundacja “Scelerisque in dictum 3”</h3>
-                                      <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                                  </div>
-                                  <div>
-                                      <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                                  </div>
-                              </div>
-                          </article>
-                      </TabPanel>
-                      <TabList className={"bottom--button--list"}>
-                          <Tab className={"bottom--button"}>1</Tab>
-                          <Tab className={"bottom--button"}>2</Tab>
-                          <Tab className={"bottom--button"}>3</Tab>
-                      </TabList>
-                  </Tabs>
+                          </div>
+                      </article>
+                  ))}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja “Dla dzieci”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja “Bez domu”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja “Lorem Ipsum 1”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja  “Lorem Ipsum 2”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja  “Lorem Ipsum 3”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja “Scelerisque in dictum 1”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja “Scelerisque in dictum 2”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
+                          {/*<article className={"tab--row"}>*/}
+                          {/*    <div className={"tab--row--container"}>*/}
+                          {/*        <div className={"tab--row--main"}>*/}
+                          {/*            <h3 className={"tab--row--title"}>Fundacja “Scelerisque in dictum 3”</h3>*/}
+                          {/*            <p className={"tab--row--paragraph"}>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>*/}
+                          {/*        </div>*/}
+                          {/*        <div>*/}
+                          {/*            <p className={"tab--row--paragraph"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>*/}
+                          {/*        </div>*/}
+                          {/*    </div>*/}
+                          {/*</article>*/}
               </TabPanel>
 
               {/*ORGANIZATIONS*/}
