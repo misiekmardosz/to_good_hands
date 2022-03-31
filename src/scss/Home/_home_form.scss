@@ -41,6 +41,7 @@
           width: 100%;
           display: flex;
           .input{
+            position: relative;
             width: 100%;
             background: none;
             border: none;
@@ -48,6 +49,11 @@
             margin: 5px;
             h3{
               margin-bottom: 12px;
+            }
+            h4{
+              color: red;
+              font-size: 16;
+              position: absolute;
             }
             input{
               background: none;
