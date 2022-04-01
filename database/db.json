@@ -2,7 +2,13 @@
   "users": [
     {
       "id": 1,
-      "name": 62
+      "userEmail": "michal.mardosz@gmail.com",
+      "password": "asdf"
     },
+    {
+      "id": 2,
+      "userEmail": "asdsdmichal.mardosz@gmail.com",
+      "password": "asdfddd"
+    }
   ]
 }

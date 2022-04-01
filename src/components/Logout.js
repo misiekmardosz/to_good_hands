@@ -6,12 +6,11 @@ const Logout = () => {
     return(
         <>
             <HeaderNav/>
-            <section className={"login--container"}>
+            <section className={"logout--container"}>
                 <div>
-                    <h2 className={"login--title"}>Wylogowano Pomyślnie</h2>
-                    <div className={"login--buttons--container"}>
-                        <button className={"login--buttons"}><Link to="/rejestracja" className="login--link">Załóż Konto</Link></button>
-                        <button className={"login--buttons"}>Zaloguj się</button>
+                    <h2 className={"logout--title"}>Wylogowano nastąpiło<br/>pomyślnie!</h2>
+                    <div className={"logout--buttons--container"}>
+                        <button className={"logout--buttons logout--button"}><Link to="/" className="logout--link">Strona główna</Link></button>
                     </div>
                 </div>
             </section>

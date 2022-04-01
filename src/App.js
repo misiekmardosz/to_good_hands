@@ -8,6 +8,7 @@ import {Logout} from "./components/Logout";
 import {Register} from "./components/Register";
 import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 import { Link } from "react-router-dom";
+const API_URL = 'http://localhost:3000';
 
 function App() {
   return (

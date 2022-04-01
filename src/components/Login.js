@@ -1,7 +1,6 @@
 import React from "react";
 import HeaderNav from "./Home/HeaderNav";
 import {Link} from "react-router-dom";
-
 const Login = () => {
     return(
         <>

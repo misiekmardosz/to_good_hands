@@ -1,0 +1,52 @@
+.logout--container{
+  height: 946px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logout--title{
+    margin-top: 250px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: -0.76px;
+    color: #3C3C3C;
+    opacity: 1;
+    margin-bottom: 123px;
+    position: relative;
+  }
+  .logout--title::after{
+    left: calc(50% - 125px);
+    bottom: -58px;
+    content: "";
+    position: absolute;
+    background: url("../../assets/Decoration.svg") center/cover;
+    width: 250px;
+    height: 33px;
+  }
+  .logout--buttons--container{
+    //width: 500px;
+    display: flex;
+    justify-content: center;
+
+    .logout--buttons{
+      font-size: 18px;
+      font-family: $font-base;
+      font-weight: 300;
+      width: 150px;
+      height: 50px;
+      margin-left: -65px;
+      background: none;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logout--link{
+        text-decoration: none;
+        color: $color--5;
+      }
+    }
+    .logout--buttons:last-child{
+      margin-right: -65px;
+      border: 0.75px solid #3C3C3C;
+    }
+  }
+}

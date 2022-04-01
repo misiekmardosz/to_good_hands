@@ -36,6 +36,9 @@
         background: $color--1;
         border: none;
         border-bottom: 1px solid $color--4;
+        &:focus{
+          outline: none;
+        }
       }
     }
     .register--form--container:last-child{
