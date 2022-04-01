@@ -3,6 +3,19 @@
   .help--title{
     font-size: 38px;
     margin-top: 70px;
+    position: relative;
+  }
+  .help--title::after{
+    left: calc(50% - 125px);
+    bottom: -58px;
+    content: "";
+    position: absolute;
+    background: url("../../assets/Decoration.svg") center/cover;
+    width: 250px;
+    height: 33px;
+  }
+  .help--tabs{
+
   }
   .tab--list{
     margin-top: 120px;
@@ -12,8 +25,11 @@
   .bottom--button--list{
     display: flex;
     justify-content: center;
-    //height: 50px;
     margin-bottom: 80px;
+  }
+  .react-tabs__tab-panel--selected{
+    height: 600px;
+    position: relative;
   }
   .tab--panel{
     font-weight: 300;
@@ -45,6 +61,39 @@
           font-size: 26px;
           margin-bottom: 6px;
         }
+      }
+    }
+    ul{
+      display: flex;
+      justify-content: center;
+      //position: absolute;
+      //left: calc(50% - 125px);
+      bottom: 0;
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-family: $font-base;
+        font-weight: 300;
+        width: 40px;
+        height: 50px;
+        margin: 22px;
+        background: none;
+      }
+      li:focus{
+        border-radius: 0;
+        border: 0.75px solid #3C3C3C;
+      }
+      li.selected{
+        border-radius: 0;
+        border: 0.75px solid #3C3C3C;
+      }
+      li:first-child{
+        display: none;
+      }
+      li:last-child{
+        display: none;
       }
     }
   }
