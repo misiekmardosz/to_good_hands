@@ -5,6 +5,7 @@ import foundations from "./HelpFoundations";
 import organizations from "./HelpOrganizations";
 import locals from "./HelpLocals";
 import ReactPaginate from 'react-paginate';
+// import ReactPaginate from 'react-paginate-single-ul';
 import {useState,useEffect} from "react";
 
 const HomeHelp = () => {
@@ -46,12 +47,17 @@ const HomeHelp = () => {
             setItemOffset(newOffset);
         };
 
+        // const displayPage = () =>{
+        //     if
+        // }
+
         return (
             <>
                 <Items currentItems={currentItems} />
                 <ReactPaginate
                     onPageChange={handlePageClick}
                     pageRangeDisplayed={5}
+                    // pageNum={this.props.totalPages}
                     pageCount={pageCount}
                     renderOnZeroPageCount={null}
                 />
