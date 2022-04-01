@@ -10,10 +10,15 @@ const HomeForm = () => {
     const [message, setMessage] = useState('')
     const [focusedMail, setFocusedMail] = useState(false)
     const [focusedName, setFocusedName] = useState(false)
+    const [focusedMessage, setFocusedMessage] = useState(false)
+    const [goodValidation, setGoodValidation] = useState('')
     const onFocusName = () => setFocusedName(true)
     const onBlurName = () => setFocusedName(false)
     const onFocusMail = () => setFocusedMail(true)
     const onBlurMail = () => setFocusedMail(false)
+    const onFocusMessage = () => setFocusedMessage(true)
+    const onBlurMessage = () => setFocusedMessage(false)
+
 
     // console.log(focused);
 
@@ -21,7 +26,7 @@ const HomeForm = () => {
       if(email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
           return <></>
         else if (email !== "" && focusedMail===false)
-            return <h4 className={"input--valid"}>podany email jest nieprawidłowy</h4>
+            return <h4 className={"input--valid"}>podany email jest nieprawidłowy!</h4>
         else
             return <></>
     }
@@ -29,16 +34,25 @@ const HomeForm = () => {
         if (name.match(/^[A-Za-z]+$/))
             return<></>
         else if (name !=="" && focusedName===false)
-            return <h4 className={"input--valid"}>podany imie jest nieprawidłowe</h4>
+            return <h4 className={"input--valid"}>podany imie jest nieprawidłowe!</h4>
         else
             return <></>
     }
+    const ValidMessage = () =>{
+        if (message.length > 120)
+            return<></>
+        else if (message !=="" && focusedMessage===false)
+            return <h4 className={"input--valid"}>wiadomość musi mieć conajmniej 120 znaków!</h4>
+        else
+            return <></>
+    }
+    console.log(message.length);
     const handleFormSubmit = () => {
       return
     }
 
     const ValidationGood = () => {
-        return <h4>wiadomość została wysłana<br/>wkrótce się z tobą skontaktujemy</h4>
+        return <h4 className={"message--sent input--valid"}>{goodValidation}</h4>
     }
 
     let handleSubmit = async (e) => {
@@ -60,10 +74,11 @@ const HomeForm = () => {
                 setName("");
                 setEmail("");
                 setMessage("");
+                setGoodValidation("wiadomość została wysłana,\nwkrótce się z tobą skontaktujemy")
 
             }
             else {
-                setMessage("Some error occured");
+
             }
         } catch (err) {
             console.log(err);
@@ -78,7 +93,7 @@ const HomeForm = () => {
             <div className="form--photo"></div>
             <div className={"form--box"}>
             <h2 className={"form--title"}>Skontaktuj się z nami</h2>
-                <ValidationGood/>
+                <ValidationGood />
             <form className={"form"} onSubmit={handleSubmit}>
                 <div className={"inputs"}>
                     <div className={"input"}>
@@ -96,11 +111,12 @@ const HomeForm = () => {
                 </div>
                 <div className={"textarea"}>
                     <h3>Wpisz swoja wiadomość</h3>
-                    <textarea onChange={e => setMessage(e.target.value)} value={message} placeholder={"Lorem ipsum dolor sit amet," +
+                    <textarea onChange={e => setMessage(e.target.value)} onFocus={onFocusMessage} onBlur={onBlurMessage} value={message} placeholder={"Lorem ipsum dolor sit amet," +
                         " consectetur adipiscing elit," +
                         " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip " +
                         "ex ea commodo consequat."}/>
+                    <ValidMessage/>
                 </div>
               <button className={"send--button"} onClick={"submit"}>Wyślij</button>
             </form>
