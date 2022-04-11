@@ -4,6 +4,9 @@ import {Link as Scroll} from "react-scroll";
 import facebook from "../../assets/Facebook.svg"
 import instagram from "../../assets/Instagram.svg"
 
+
+
+
 const HomeForm = () => {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
@@ -23,34 +26,23 @@ const HomeForm = () => {
     // console.log(focused);
 
     const ValidMail = () => {
-      if(email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
-          return <></>
-        else if (email !== "" && focusedMail===false)
+      if(email !== "" && focusedMail===false && !email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
             return <h4 className={"input--valid"}>podany email jest nieprawidłowy!</h4>
         else
             return <></>
     }
     const ValidName = () =>{
-        if (name.match(/^[A-Za-z]+$/))
-            return<></>
-        else if (name !=="" && focusedName===false)
+        if (name !=="" && focusedName===false && !name.match(/^[A-Za-z]+$/))
             return <h4 className={"input--valid"}>podany imie jest nieprawidłowe!</h4>
         else
             return <></>
     }
     const ValidMessage = () =>{
-        if (message.length > 120)
-            return<></>
-        else if (message !=="" && focusedMessage===false)
+        if (message.length < 120 && message !=="" && focusedMessage===false)
             return <h4 className={"input--valid"}>wiadomość musi mieć conajmniej 120 znaków!</h4>
         else
             return <></>
     }
-    console.log(message.length);
-    const handleFormSubmit = () => {
-      return
-    }
-
     const ValidationGood = () => {
         return <h4 className={"message--sent input--valid"}>{goodValidation}</h4>
     }
@@ -74,7 +66,7 @@ const HomeForm = () => {
                 setName("");
                 setEmail("");
                 setMessage("");
-                setGoodValidation("wiadomość została wysłana,\nwkrótce się z tobą skontaktujemy")
+                setGoodValidation("wiadomość została wysłana, wkrótce się z tobą skontaktujemy")
 
             }
             else {
