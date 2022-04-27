@@ -1,7 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {Link as Scroll} from 'react-scroll';
-// import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import HeaderNav from "./HeaderNav";
 
 
@@ -9,7 +6,6 @@ const HomeHeader = () => {
     return(
         <>
             <header className="header" title={"section1"}>
-                {/*<img src={homeHero} className="main--photo"/>*/}
                 <div className="main--photo"></div>
                 <div className="header--container">
                     <HeaderNav/>

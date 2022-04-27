@@ -3,10 +3,7 @@ import {Link} from "react-router-dom";
 import {Link as Scroll} from "react-scroll";
 import facebook from "../../assets/Facebook.svg"
 import instagram from "../../assets/Instagram.svg"
-
-
-
-
+import {ValidName, ValidMail, ValidMessage, ValidationGood} from "./Validation";
 const HomeForm = () => {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
@@ -24,28 +21,6 @@ const HomeForm = () => {
 
 
     // console.log(focused);
-
-    const ValidMail = () => {
-      if(email !== "" && focusedMail===false && !email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
-            return <h4 className={"input--valid"}>podany email jest nieprawidłowy!</h4>
-        else
-            return <></>
-    }
-    const ValidName = () =>{
-        if (name !=="" && focusedName===false && !name.match(/^[A-Za-z]+$/))
-            return <h4 className={"input--valid"}>podany imie jest nieprawidłowe!</h4>
-        else
-            return <></>
-    }
-    const ValidMessage = () =>{
-        if (message.length < 120 && message !=="" && focusedMessage===false)
-            return <h4 className={"input--valid"}>wiadomość musi mieć conajmniej 120 znaków!</h4>
-        else
-            return <></>
-    }
-    const ValidationGood = () => {
-        return <h4 className={"message--sent input--valid"}>{goodValidation}</h4>
-    }
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -85,20 +60,20 @@ const HomeForm = () => {
             <div className="form--photo"></div>
             <div className={"form--box"}>
             <h2 className={"form--title"}>Skontaktuj się z nami</h2>
-                <ValidationGood />
+                <ValidationGood goodValidation={goodValidation}/>
             <form className={"form"} onSubmit={handleSubmit}>
                 <div className={"inputs"}>
                     <div className={"input"}>
                         <h3>wpisz swoje imie</h3>
                         {/*<input className={"form--input"} placeholder={"Krzysztof"}/>*/}
                         <input type="text" value={name} onBlur={onBlurName} onFocus={onFocusName} className={"form--input"} placeholder='Krzysztof'onChange={e => setName(e.target.value)}/>
-                        <ValidName/>
+                        <ValidName name={name} focusedName={focusedName}/>
                     </div>
                     <div className={"input"}>
                         <h3>wpisz swoj email</h3>
                         {/*<input className={"form--input"} placeholder={"abc@xyz.com"}/>*/}
                         <input type="text" value={email} onBlur={onBlurMail} onFocus={onFocusMail} className={"form--input"} placeholder='abc@xyz.com'onChange={e => setEmail(e.target.value)}/>
-                        <ValidMail/>
+                        <ValidMail email={email} focusedMail={focusedMail}/>
                     </div>
                 </div>
                 <div className={"textarea"}>
@@ -108,7 +83,7 @@ const HomeForm = () => {
                         " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip " +
                         "ex ea commodo consequat."}/>
-                    <ValidMessage/>
+                    <ValidMessage message={message} focusedMessage={focusedMessage}/>
                 </div>
               <button className={"send--button"} onClick={"submit"}>Wyślij</button>
             </form>

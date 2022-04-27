@@ -1,14 +1,42 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import foundations from "./HelpFoundations";
-import organizations from "./HelpOrganizations";
-import locals from "./HelpLocals";
 import ReactPaginate from 'react-paginate';
-// import ReactPaginate from 'react-paginate-single-ul';
 import {useState,useEffect} from "react";
+const API_URL = 'http://localhost:3000';
 
 const HomeHelp = () => {
+    const [foundations, setFoundations] = useState([{}])
+    const [locals, setLocals] = useState([{}])
+    const [organizations, setOrganizations] = useState([{}])
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        setLoading(true);
+        fetch(`${API_URL}/foundations`)
+            .then((response) => response.json())
+            .then((data) => {
+                setFoundations(data);
+                setLoading(false);
+            });
+    }, []);
+    useEffect(() => {
+        setLoading(true);
+        fetch(`${API_URL}/locals`)
+            .then((response) => response.json())
+            .then((data) => {
+                setLocals(data);
+                setLoading(false);
+            });
+    }, []);
+    useEffect(() => {
+        setLoading(true);
+        fetch(`${API_URL}/organizations`)
+            .then((response) => response.json())
+            .then((data) => {
+                setOrganizations(data);
+                setLoading(false);
+            });
+    }, []);
     function Items({ currentItems }) {
         return (
             <>
@@ -46,18 +74,12 @@ const HomeHelp = () => {
             const newOffset = (event.selected * itemsPerPage) % name.length;
             setItemOffset(newOffset);
         };
-
-        // const displayPage = () =>{
-        //     if
-        // }
-
         return (
             <>
                 <Items currentItems={currentItems} />
                 <ReactPaginate
                     onPageChange={handlePageClick}
                     pageRangeDisplayed={5}
-                    // pageNum={this.props.totalPages}
                     pageCount={pageCount}
                     renderOnZeroPageCount={null}
                 />
