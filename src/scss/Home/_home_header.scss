@@ -79,18 +79,24 @@
   }
   .nav{
     width: 100%;
-    text-align: right;
+    display: flex;
+    justify-content: center;
+    //text-align: right;
     margin-top: 40px;
     .nav--link{
       color: $color--5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       text-decoration: none;
-
-      padding: 20px 25px;
+      padding: 10px 15px;
       transition: 0.3s;
     }
     .nav--link:hover{
       opacity: 0.4;
       background-color: $color--3;
+      cursor: pointer;
     }
   }
 }

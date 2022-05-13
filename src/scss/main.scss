@@ -29,6 +29,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover{
+    cursor: pointer;
+  }
 }
 .tab--buttons{
   border: none;
@@ -59,6 +62,9 @@ body{
   height: 50px;
   margin: 22px;
   background: none;
+  &:hover{
+    cursor: pointer;
+  }
   //border: 0.75px solid #3C3C3C;
 }
 .bottom--button:focus{
@@ -78,4 +84,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  &:hover{
+    cursor: pointer;
+  }
 }

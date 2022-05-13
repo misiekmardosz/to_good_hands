@@ -1,11 +1,13 @@
-.help--container{
+.help--container {
   text-align: center;
-  .help--title{
+
+  .help--title {
     font-size: 38px;
     margin-top: 70px;
     position: relative;
   }
-  .help--title::after{
+
+  .help--title::after {
     left: calc(50% - 125px);
     bottom: -58px;
     content: "";
@@ -14,37 +16,44 @@
     width: 250px;
     height: 33px;
   }
-  .help--tabs{
 
+  .help--tabs {
   }
-  .tab--list{
+
+  .tab--list {
     margin-top: 120px;
     display: flex;
     justify-content: center;
   }
-  .bottom--button--list{
+
+  .bottom--button--list {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
   }
-  .react-tabs__tab-panel--selected{
+
+  .react-tabs__tab-panel--selected {
     height: 600px;
     position: relative;
   }
-  .tab--panel{
+
+  .tab--panel {
     font-weight: 300;
     text-align: center;
     position: relative;
-    .tab--title{
+
+    .tab--title {
       font-size: 22px;
       margin-top: 70px;
       margin-bottom: 66px;
     }
-    .tab--row{
+
+    .tab--row {
       display: flex;
       flex-flow: column;
       align-items: center;
-      .tab--row--container{
+
+      .tab--row--container {
         height: 81px;
         display: flex;
         justify-content: space-between;
@@ -52,25 +61,30 @@
         margin-bottom: 34px;
         max-width: 1344px;
       }
-      div{
+
+      div {
         text-align: right;
         width: 100%;
       }
-      .tab--row--main{
+
+      .tab--row--main {
         text-align: left;
-        .tab--row--title{
+
+        .tab--row--title {
           font-size: 26px;
           margin-bottom: 6px;
         }
       }
     }
-    ul{
+
+    ul {
       display: flex;
       justify-content: center;
       position: absolute;
       left: calc(50% - 125px);
       bottom: 0;
-      li{
+
+      li {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,19 +95,27 @@
         height: 50px;
         margin: 22px;
         background: none;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
-      li:focus{
+
+      li:focus {
         border-radius: 0;
         border: 0.75px solid #3C3C3C;
       }
-      li.selected{
+
+      li.selected {
         border-radius: 0;
         border: 0.75px solid #3C3C3C;
       }
-      li:first-child{
+
+      li:first-child {
         display: none;
       }
-      li:last-child{
+
+      li:last-child {
         display: none;
       }
     }
